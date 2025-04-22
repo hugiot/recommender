@@ -4,10 +4,11 @@
 
 ## NAS
 
-> 提示：
-> 端口分类：系统端口、映射端口（docker 应用）  
-> 端口范围：50000 ~ 59999（可自行调整）  
-> 单个服务端口范围：0 ~ 9（例如：50000 ~ 50009、50010 ~ 50019）
+**端口定义**
+
+* 分类：系统端口、映射端口（docker 应用）
+* 范围：50000 ~ 59999（可自行调整）
+* 单个服务端口范围：0 ~ 9（例如：50000 ~ 50009、50010 ~ 50019）
 
 | 类别 | 名称 | 描述 | 端口 | 链接 |
 |-|-|-|-|-|
@@ -15,7 +16,7 @@
 | | 飞牛 fnOS | 免费的 NAS 系统 | 5666、5667 | [官网](https://www.fnnas.com/) |
 | 网络 | | | | |
 | | Tailscale | 基于 WireGuard 的虚拟组网工具 | | [官网](https://tailscale.com/) |
-| | Headscale | Tailscale 控制服务器的开源自托管实现 | | [官网](Tailscale 控制服务器的开源自托管实现) | 
+| | Headscale | Tailscale 控制服务器的开源自托管实现 | | [官网](https://headscale.net/stable/) | 
 | 办公 | | | | |
 | | Nextcloud | 开源云协作平台（个人云盘） | 50000:50 | [官网](https://nextcloud.com/) |
 | | ONLYOFFICE | 开源的办公套件（可搭配 Nextcloud 使用） | 50001:80 | [官网](https://www.onlyoffice.com/) |
