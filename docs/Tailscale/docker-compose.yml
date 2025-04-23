@@ -1,19 +1,18 @@
 version: "3"
-
 services:
   tailscale:
     image: tailscale/tailscale:latest
     container_name: tailscale
-    hostname: Home-NSA # 自定义
+    hostname: NSA # 自定义
     environment:
-      - TS_AUTHKEY=<your_auth_key> # 自行替换
+      - TS_AUTHKEY=tskey-auth-kJDnLXE8sT11CNTRL-GX3ZFEnSii8KCrmkf3amk87JG4VGXzP1 # 自行替换
       - TS_STATE_DIR=/var/lib/tailscale
       - TS_USERSPACE=false
     volumes:
-      - /vol1/1000/docker/tailscale/state:/var/lib/tailscale # 自定义
-    devices:
+      - /vol1/1000/docker/tailscale/data:/var/lib/tailscale # 自定义
       - /dev/net/tun:/dev/net/tun
     cap_add:
-      - net_admin
-    network_mode: host
+      - NET_ADMIN
+      - SYS_MODULE
     restart: always
+    network_mode: host

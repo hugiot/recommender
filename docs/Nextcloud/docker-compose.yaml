@@ -1,5 +1,4 @@
-version: '3'
-
+version: "3"
 services:
   nextcloud-db:
     image: mariadb:latest
@@ -8,7 +7,7 @@ services:
     restart: always
     command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
     volumes:
-      - /vol1/1000/docker/nextcloud/database:/var/lib/mysql # 自定义
+      - /vol1/1000/docker/nextcloud/mysql:/var/lib/mysql # 自定义
     environment:
       - MYSQL_ROOT_PASSWORD=5f4dcc3b5aa765d61d8327deb882cf99
       - MYSQL_PASSWORD=5f4dcc3b5aa765d61d8327deb882cf99
@@ -28,7 +27,7 @@ services:
     container_name: nextcloud-onlyoffice
     hostname: nextcloud-onlyoffice
     ports:
-      - 50001:80
+      - "50001:80"
     restart: always
     environment:
       - JWT_SECRET=5f4dcc3b5aa765d61d8327deb882cf99
@@ -49,7 +48,7 @@ services:
       - nextcloud-redis
       - nextcloud-onlyoffice
     volumes:
-      - /vol1/1000/docker/nextcloud/app:/var/www/html # 自定义
+      - /vol1/1000/docker/nextcloud/nextcloud:/var/www/html # 自定义
     environment:
       - MYSQL_PASSWORD=5f4dcc3b5aa765d61d8327deb882cf99
       - MYSQL_DATABASE=nextcloud
