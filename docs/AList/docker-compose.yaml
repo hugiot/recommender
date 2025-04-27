@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  alist:
+    image: xhofe/alist:latest
+    container_name: alist
+    restart: always
+    volumes:
+      - /vol1/1000/docker/alist/data:/opt/alist/data
+    ports:
+      - "53500:5244"
+    environment:
+      PUID: '0'
+      PGID: '0'
+      UMASK: '022'

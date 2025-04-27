@@ -27,3 +27,5 @@
 |    | 1  | ⭐ [EmulatorJS](https://github.com/EmulatorJS/EmulatorJS)    | web 游戏模拟器                 | 52500:3000<br/>52501:80<br/>52502:4001          |
 | 下载 |    |                                                             |                           | 53000 ~ 53499                                   |
 |    | 1  | ⭐ [MediaGo](https://github.com/caorushizi/mediago)          | 跨平台视频提取工具                 | 53000:8899                                      |
+| 云盘 |    |                                                             |                           | 53500 ~ 53599                                   |
+|    | 1  | ⭐ [AList](https://github.com/AlistGo/alist)                 | 一个支持多存储的文件列表程序            | 53500:5244                                      |
